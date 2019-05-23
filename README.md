@@ -2,6 +2,29 @@
 
 加强版 img 标签，仿微信小程序 image 标签，多种裁剪、缩放模式，异步加载图片，支持重新加载图片
 
+## 例子
+
+例：
+
+```
+import Img from '@dyb881/img';
+// 以下两个针对对应客户端进行优化处理，推荐按情况获取对应组件
+// import Img from '@dyb881/img/pc';
+// import Img from '@dyb881/img/mobile';
+import '@dyb881/img/style.css';
+
+// 直接使用
+<Img src="" />
+// 不显示图片，只显示占位div
+<Img src="" show={false} />
+// 可以完整地将图片显示出来
+<Img src="" mode="aspectFit" style={{width: 100, height: 100}} />
+// 可以完整地将图片显示出来, 并靠左上角
+<Img src="" mode={['aspectFit', 'left', 'top']} style={{width: 100, height: 100}} />
+// 不缩放图片, 只显示图片的左上边区域
+<Img src="" mode={['left', 'top']} style={{width: 100, height: 100}} />
+```
+
 ## 输入参数
 
 ```
@@ -29,18 +52,3 @@ bottom 裁剪模式，不缩放图片，只显示图片的底部区域<br>
 center 裁剪模式，不缩放图片，只显示图片的中间区域<br>
 left 裁剪模式，不缩放图片，只显示图片的左边区域<br>
 right 裁剪模式，不缩放图片，只显示图片的右边区域<br>
-
-例：
-
-```
-// 直接使用
-<Img src="" />
-// 不显示图片，只显示占位div
-<Img src="" show={false} />
-// 可以完整地将图片显示出来
-<Img src="" mode="aspectFit" style={{width: 100, height: 100}} />
-// 可以完整地将图片显示出来, 并靠左上角
-<Img src="" mode={['aspectFit', 'left', 'top']} style={{width: 100, height: 100}} />
-// 不缩放图片, 只显示图片的左上边区域
-<Img src="" mode={['left', 'top']} style={{width: 100, height: 100}} />
-```

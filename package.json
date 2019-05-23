@@ -1,6 +1,6 @@
 {
   "name": "@dyb881/img",
-  "version": "",
+  "version": "0.1.0",
   "description": "加强版 <img /> 标签，仿微信小程序image标签，多种裁剪、缩放模式，异步加载图片，支持重新加载图片",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
