@@ -1,6 +1,5 @@
 import React from 'react';
 import { getImg } from '@dyb881/file';
-import './style.less';
 
 // 裁剪、缩放模式
 type mode = 'scaleToFill' | 'aspectFit' | 'aspectFill' | 'top' | 'bottom' | 'center' | 'left' | 'right';

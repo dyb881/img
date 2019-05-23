@@ -9,9 +9,9 @@
 ```
 import Img from '@dyb881/img';
 // 以下两个针对对应客户端进行优化处理，推荐按情况获取对应组件
-// import Img from '@dyb881/img/pc';
-// import Img from '@dyb881/img/mobile';
-import '@dyb881/img/style.css';
+// import Img from '@dyb881/img/lib/pc';
+// import Img from '@dyb881/img/lib/mobile';
+import '@dyb881/img/lib/style.css';
 
 // 直接使用
 <Img src="" />
