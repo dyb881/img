@@ -1,0 +1,43 @@
+{
+  "name": "@dyb881/img",
+  "version": "",
+  "description": "加强版 <img /> 标签，仿微信小程序image标签，多种裁剪、缩放模式，异步加载图片，支持重新加载图片",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "typings": "./lib/index.d.ts",
+  "style": "./lib/style.css",
+  "less": "./src/style.less",
+  "scripts": {
+    "build": "tsc && lessc ./src/style.less > ./lib/style.css",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "push": "yarn build && npm publish --access=public"
+  },
+  "author": "dyb881",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^3.9.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "@dyb881/file": "^0.1.3",
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
+    "antd": "^3.18.2",
+    "antd-mobile": "^2.2.13",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyb881/img.git"
+  },
+  "keywords": [
+    "img"
+  ],
+  "bugs": {
+    "url": "https://github.com/dyb881/img/issues"
+  },
+  "homepage": "https://github.com/dyb881/img#readme"
+}
