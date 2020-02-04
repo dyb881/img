@@ -8,15 +8,14 @@
 
 ```
 import Img from '@dyb881/img';
-// 以下两个针对对应客户端进行优化处理，推荐按情况获取对应组件
-// import Img from '@dyb881/img/lib/pc';
-// import Img from '@dyb881/img/lib/mobile';
 import '@dyb881/img/lib/style.css';
 
 // 直接使用
 <Img src="" />
 // 不显示图片，只显示占位div
 <Img src="" show={false} />
+// 提示内容或按钮自定义
+<Img src="" loadedTip="加载中" reloadTip="重新加载" />
 // 可以完整地将图片显示出来
 <Img src="" mode="aspectFit" style={{width: 100, height: 100}} />
 // 可以完整地将图片显示出来, 并靠左上角
