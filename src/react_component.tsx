@@ -4,7 +4,7 @@ import { getImg } from '@dyb881/file';
 // 裁剪、缩放模式
 type mode = 'scaleToFill' | 'aspectFit' | 'aspectFill' | 'top' | 'bottom' | 'center' | 'left' | 'right';
 
-export interface IProps {
+export interface IImgProps {
   src?: string; // 图片地址
   mode?: 'none' | mode | mode[]; // 裁剪、缩放模式 default none
   show?: boolean; // 显示图片 default true
@@ -13,7 +13,7 @@ export interface IProps {
   [key: string]: any;
 }
 
-interface IState {
+interface IImgState {
   src: string;
   openMode: boolean; // 开启裁剪、缩放模式
   modeStyle: any; // 模式样式
@@ -22,7 +22,7 @@ interface IState {
   err: boolean;
 }
 
-export default class extends React.Component<IProps, IState> {
+export default class Img extends React.Component<IImgProps, IImgState> {
   box?: HTMLDivElement;
 
   state = {
@@ -42,7 +42,7 @@ export default class extends React.Component<IProps, IState> {
     });
   }
 
-  getSnapshotBeforeUpdate(prevProps: IProps) {
+  getSnapshotBeforeUpdate(prevProps: IImgProps) {
     const { src, show = true } = this.props;
     const { src: pSrc, show: pShow = true } = prevProps;
     return {
@@ -51,7 +51,7 @@ export default class extends React.Component<IProps, IState> {
     };
   }
 
-  componentDidUpdate(_prevProps: IProps, _prevState: IState, update: any) {
+  componentDidUpdate(_prevProps: IImgProps, _prevState: IImgState, update: any) {
     const { isNewSrc, isToShow } = update;
     if (isNewSrc || isToShow) {
       this.load(); // 更新或展示图片
