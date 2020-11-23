@@ -1,3 +1,5 @@
+# ！！已经停止更新，并迁移到 [Seasoning](https://dyb881.github.io/seasoning/common/components/img)
+
 # img
 
 加强版 img 标签，仿微信小程序 image 标签，多种裁剪、缩放模式，异步加载图片，支持重新加载图片
